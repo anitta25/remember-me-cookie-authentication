@@ -1,0 +1,18 @@
+spring:
+     datasource:
+         initialization-mode: always
+         platform: postgres
+         url: jdbc:postgresql://localhost:5432/sampledb
+         username: postgres
+         password: pass
+     jpa:
+          hibernate:
+               ddl-auto: update
+
+          properties:
+               hibernate:
+                    hbm2ddl:
+                      create_schema_if_not_exists: true
+
+
+          database-platform: org.hibernate.dialect.PostgreSQLDialect
